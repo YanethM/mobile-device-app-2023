@@ -1,26 +1,52 @@
 {
   "expo": {
-    "name": "MantenimientoAndinoApp",
-    "slug": "MantenimientoAndinoApp",
+    "name": "MobileDeviceApp",
+    "slug": "MobileDeviceApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "permissions": {
+        "camera": true,
+        "photoLibrary": true
+      }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#000000"
+    },
+    "androidNavigationBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#000000"
+    },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#000000"
     },
     "android": {
+      "permissions": ["CAMERA_ROLL", "CAMERA"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       }
     },
     "web": {
